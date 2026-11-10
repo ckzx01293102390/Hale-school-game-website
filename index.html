@@ -1,49 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hale School Game Arcade</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            text-align: center;
-            padding: 50px;
-        }
-        h1 {
-            color: #38bdf8;
-        }
-        .game-list {
-            margin-top: 30px;
-        }
-        .game-card {
-            background: #1e293b;
-            padding: 20px;
-            margin: 15px auto;
-            max-width: 400px;
-            border-radius: 8px;
-        }
-        a {
-            color: #38bdf8;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <h1>🎮 Hale School Game Arcade</h1>
-    <p>Welcome to the official hub for all our school's HTML games!</p>
-    
-    <div class="game-list">
-        <div class="game-card">
-            <h3>Game 1: Coming Soon!</h3>
-            <p><a href="games/game-1/index.html">Play Game 1</a></p>
-        </div>
-    </div>
-</body>
-</html>
+<style>
+    html {
+        scroll-behavior: smooth; /* Enables smooth scrolling */
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #090d16;
+        color: #f1f5f9;
+        text-align: center;
+        padding: 40px 20px;
+        margin: 0;
+    }
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #38bdf8, #818cf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p {
+        color: #94a3b8;
+    }
+    .game-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .game-card {
+        background: rgba(30, 41, 59, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 25px;
+        width: 260px;
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+    /* Smooth hover effect */
+    .game-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+        border-color: rgba(56, 189, 248, 0.4);
+    }
+    .game-card h3 {
+        margin-top: 0;
+        color: #f8fafc;
+    }
+    a.play-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #38bdf8;
+        color: #0f172a;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 6px;
+        transition: background-color 0.2s ease;
+    }
+    a.play-btn:hover {
+        background-color: #7dd3fc;
+    }
+</style>
