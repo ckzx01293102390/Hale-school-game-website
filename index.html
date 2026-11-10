@@ -1,102 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hale School Game Arcade</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #090d16;
-            color: #f1f5f9;
-            text-align: center;
-            padding: 40px 20px;
-            margin: 0;
-        }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p.subtitle {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-        .game-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        .game-card {
-            background: rgba(30, 41, 59, 0.7);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 25px;
-            border-radius: 12px;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            text-align: left;
-        }
-        .game-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
-            border-color: rgba(56, 189, 248, 0.4);
-        }
-        .game-card h3 {
-            margin-top: 0;
-            color: #f8fafc;
-        }
-        .game-card p {
-            color: #94a3b8;
-            font-size: 0.9rem;
-        }
-        .creator {
-            font-size: 0.8rem;
-            color: #38bdf8;
-            margin-bottom: 15px;
-        }
-        a.play-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background-color: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            font-weight: 600;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            transition: background-color 0.2s ease;
-        }
-        a.play-btn:hover {
-            background-color: #7dd3fc;
-        }
-    </style>
-</head>
-<body>
-    <h1>🎮 Hale School Game Arcade</h1>
-    <p class="subtitle">The official hub for student-made HTML games</p>
-    
-    <div class="game-grid">
-        <div class="game-card">
-            <h3>Game 1</h3>
-            <div class="creator">By You</div>
-            <p>An awesome HTML game built for the school arcade.</p>
-            <a href="games/game-1/index.html" class="play-btn">Play Game</a>
-        </div>
-
-        <div class="game-card">
-            <h3>Game 2</h3>
-            <div class="creator">Coming Soon</div>
-            <p>Placeholder slot ready for a friend's game!</p>
-            <a href="#" class="play-btn" style="opacity: 0.5; pointer-events: none;">Coming Soon</a>
-        </div>
-    </div>
-</body>
-</html>
+<style>
+    html {
+        scroll-behavior: smooth;
+    }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        /* Rich background gradient so the glass effect stands out */
+        background: radial-gradient(circle at top, #1e1b4b, #090d16 70%);
+        color: #f1f5f9;
+        text-align: center;
+        padding: 60px 20px;
+        margin: 0;
+        min-height: 100vh;
+        box-sizing: border-box;
+    }
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 10px;
+        background: linear-gradient(to right, #38bdf8, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p.subtitle {
+        color: #94a3b8;
+        font-size: 1.1rem;
+        margin-bottom: 50px;
+    }
+    .game-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+        max-width: 950px;
+        margin: 0 auto;
+    }
+    /* Heavy frosted glass card */
+    .game-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-top: 1px solid rgba(255, 255, 255, 0.15); /* Highlight top edge */
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        text-align: left;
+    }
+    .game-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(56, 189, 248, 0.2);
+        border-color: rgba(56, 189, 248, 0.4);
+    }
+    .game-card h3 {
+        margin-top: 0;
+        color: #f8fafc;
+        font-size: 1.4rem;
+    }
+    .game-card p {
+        color: #94a3b8;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    .creator {
+        font-size: 0.85rem;
+        color: #38bdf8;
+        margin-bottom: 15px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    a.play-btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #38bdf8, #0284c7);
+        color: #f8fafc;
+        text-decoration: none;
+        font-weight: 600;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+    a.play-btn:hover {
+        transform: scale(1.03);
+        opacity: 0.9;
+    }
+</style>
